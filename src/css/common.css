@@ -22,3 +22,15 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.gallery {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.animal-image {
+  width: 420px;
+  height: 320px;
+}
