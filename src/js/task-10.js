@@ -11,15 +11,23 @@ const destroyBtn = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 const inputEl = document.querySelector('input');
 
+
+
 function createBoxes(amount) {
+
+   const fragmentOfBoxes = document.createDocumentFragment();
+  
+
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
     const size = 30 + (i * 10);
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
-    boxes.appendChild(box);
-  };
+    fragmentOfBoxes.appendChild(box);
+    
+  }
+   boxes.appendChild(fragmentOfBoxes);
 };
 
 function destroyBoxes(amount) { 

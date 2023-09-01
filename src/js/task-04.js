@@ -8,18 +8,22 @@ const decrementBtn = counterBox.firstElementChild;
 const incrementBtn = counterBox.lastElementChild;
 
 const updateCounterValue = (newValue) => {
-  counterValue = newValue;
   valueEL.textContent = counterValue;
 };
 
 decrementBtn.addEventListener("click", () => {
-  updateCounterValue(counterValue - 1);
+  counterValue -= 1;
+  updateCounterValue();
+
 });
 incrementBtn.addEventListener("click", () => {
-  updateCounterValue(counterValue + 1);
+  counterValue += 1;
+  updateCounterValue();
+
 });
 
 
 console.log();
-console.log(counterValue);
+console.log(updateCounterValue);
+
 
